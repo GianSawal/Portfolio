@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>pfSense High Availability</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body class="project-page">
+
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<div class="container nav-content">
+
+<h2 class="logo">Gian Sawal</h2>
+
+<a href="index.html#projects" class="nav-back">← Back to Portfolio</a>
+
+</div>
+
+</nav>
+
+
+
+<!-- PROJECT HEADER -->
+
+<section class="project-header">
+
+<div class="container">
+
+<h1>pfSense High Availability Firewall</h1>
+
+<p class="project-intro">
+
+This project demonstrates the implementation of a High Availability firewall
+architecture using pfSense. The setup ensures continuous network connectivity
+through automatic failover between a primary and backup firewall using the
+Common Address Redundancy Protocol (CARP).
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- FIREWALL STATUS IMAGE -->
+
+<section class="project-topology">
+
+<div class="container">
+
+<img src="assets/carp_p.png" alt="pfSense CARP Master Firewall">
+<img src="assets/carp_b.png">
+
+</div>
+
+</section>
+
+
+
+<!-- EXPLANATION -->
+
+<section class="project-section">
+
+<div class="container">
+
+<h2>High Availability Architecture</h2>
+
+<p>
+
+In enterprise environments, network downtime can severely impact operations.
+To address this challenge, this project implements a High Availability firewall
+architecture using two pfSense firewall instances configured in a failover pair.
+
+</p>
+
+<p>
+
+The setup consists of a primary firewall (MASTER) and a secondary firewall
+(BACKUP). Both firewalls share a virtual IP address through CARP. The primary
+firewall actively processes traffic while the backup firewall continuously
+synchronizes its configuration and remains ready to take over in case of
+failure.
+
+</p>
+
+<p>
+
+If the master firewall becomes unavailable due to hardware failure, network
+issues, or system errors, the backup firewall automatically assumes the
+MASTER role. This failover occurs almost instantly, ensuring that network
+services remain available without manual intervention.
+
+</p>
+
+<p>
+
+Firewall rules, NAT policies, and configuration settings are synchronized
+between both nodes to maintain consistency. This ensures that the backup
+firewall can immediately take over network traffic without disrupting
+existing sessions or services.
+
+</p>
+
+<p>
+
+This High Availability architecture improves network reliability, minimizes
+downtime, and ensures continuous service availability for enterprise
+infrastructure.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- TECHNOLOGIES USED -->
+
+<section class="project-section">
+
+<div class="container">
+
+<h2>Technologies Used</h2>
+
+<div class="tech-grid">
+
+
+<div class="tech-card">
+
+<h3>pfSense Firewall</h3>
+
+<p>
+
+pfSense is an open-source firewall and routing platform used to secure
+and manage network traffic. It provides advanced firewall rules,
+network monitoring, and VPN capabilities.
+
+</p>
+
+</div>
+
+
+
+<div class="tech-card">
+
+<h3>CARP (Common Address Redundancy Protocol)</h3>
+
+<p>
+
+CARP enables multiple firewall systems to share a virtual IP address.
+This allows automatic failover between primary and backup nodes
+without interrupting network services.
+
+</p>
+
+</div>
+
+
+
+<div class="tech-card">
+
+<h3>State Synchronization</h3>
+
+<p>
+
+State synchronization ensures that active firewall sessions and
+connection states are replicated between the primary and backup
+firewalls, allowing seamless failover during outages.
+
+</p>
+
+</div>
+
+
+
+<div class="tech-card">
+
+<h3>Firewall Rules</h3>
+
+<p>
+
+Firewall rules control network traffic between internal and external
+networks. In this project, the rules are synchronized between both
+pfSense nodes to maintain consistent security policies.
+
+</p>
+
+</div>
+
+
+
+<div class="tech-card">
+
+<h3>Network Address Translation (NAT)</h3>
+
+<p>
+
+NAT allows internal private IP addresses to communicate with external
+networks while hiding internal network structure for improved security.
+
+</p>
+
+</div>
+
+
+
+<div class="tech-card">
+
+<h3>Redundant Network Infrastructure</h3>
+
+<p>
+
+The High Availability configuration ensures that if one firewall fails,
+the backup system immediately takes control, maintaining uninterrupted
+network connectivity.
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- BACK BUTTON -->
+
+<section class="project-footer">
+
+<div class="container">
+
+<a href="index.html#projects" class="btn-primary">
+← Back to Projects
+</a>
+
+</div>
+
+</section>
+
+
+
+<footer class="footer">
+
+<p>© 2026 Gian Sawal | Network Administration Portfolio</p>
+
+</footer>
+
+
+
+</body>
+
+</html>

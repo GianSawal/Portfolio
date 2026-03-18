@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Resilient & Fault-Tolerant Network Infrastructure</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body class="project-page">
+
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<div class="container nav-content">
+
+<h2 class="logo">Gian Sawal</h2>
+
+<a href="index.html#projects" class="nav-back">← Back to Portfolio</a>
+
+</div>
+
+</nav>
+
+
+
+<!-- PROJECT HEADER -->
+
+<section class="project-header">
+
+<div class="container">
+
+<h1>Resilient & Fault-Tolerant Network Infrastructure</h1>
+
+<p class="project-intro">
+
+This capstone project demonstrates the design and implementation of a
+highly resilient enterprise network infrastructure built to maintain
+continuous network availability even during hardware failures or
+network disruptions.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- NETWORK TOPOLOGY -->
+
+<section class="project-topology">
+
+<div class="container">
+
+<img src="assets/capstone.jpg" alt="Resilient Enterprise Network Topology">
+
+</div>
+
+</section>
+
+
+
+<!-- EXPLANATION -->
+
+<section class="project-section">
+
+<div class="container">
+
+<h2>Enterprise Network Architecture</h2>
+
+<p>
+
+This capstone project focuses on designing and implementing a resilient
+enterprise network infrastructure capable of maintaining continuous
+connectivity even during system failures, network interruptions, or
+hardware outages. Modern organizations depend heavily on reliable
+network systems to support daily operations, communication platforms,
+and access to critical services. Because of this, the primary goal of
+this project was to build a network architecture that emphasizes
+high availability, redundancy, and fault tolerance.
+</p>
+
+<p>
+
+The network infrastructure was designed to simulate a real-world
+enterprise environment where multiple departments, servers, and
+network services operate simultaneously. To support these requirements,
+the architecture integrates several networking technologies including
+high availability firewalls, routing systems, switching infrastructure,
+and network segmentation techniques. These components work together to
+ensure that network traffic flows efficiently while maintaining strong
+security and stability across the entire system.
+</p>
+
+<p>
+
+At the edge of the network, two pfSense firewall systems are configured
+in a High Availability cluster using the Common Address Redundancy
+Protocol (CARP). In this configuration, the firewalls share a virtual
+IP address that represents the gateway for internal networks. One
+firewall operates as the primary node (MASTER), actively processing
+network traffic and enforcing firewall policies. The second firewall
+acts as a backup node (BACKUP) that continuously synchronizes
+configuration settings and connection states from the primary system.
+
+</p>
+
+<p>
+
+If the primary firewall becomes unavailable due to hardware failure or
+network disruption, the backup firewall automatically assumes the
+MASTER role and continues processing traffic without manual
+intervention. This automatic failover mechanism ensures that network
+security policies remain active and that connectivity to external
+networks is not interrupted.
+
+</p>
+
+<p>
+
+To further improve network resilience, the infrastructure integrates
+dual Internet Service Providers (ISPs). This configuration provides
+internet connectivity redundancy by allowing the network to switch
+to an alternate ISP connection if the primary provider becomes
+unavailable. Through routing policies and gateway monitoring,
+network traffic can automatically be redirected to the secondary
+internet connection, ensuring uninterrupted external connectivity.
+
+</p>
+
+<p>
+
+Overall, the architecture demonstrates how enterprise networks achieve
+high availability and operational reliability through redundancy,
+load distribution, and structured network design. By combining firewall
+failover, dual ISP connectivity, VLAN segmentation, and routing
+infrastructure, the system is able to maintain continuous network
+services even during infrastructure failures.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- TECHNOLOGIES USED -->
+
+<section class="project-section">
+
+<div class="container">
+
+<h2>Technologies Used</h2>
+
+<div class="tech-grid">
+
+
+<div class="tech-card">
+
+<h3>pfSense High Availability</h3>
+
+<p>
+
+Two pfSense firewall systems are configured in a High Availability
+pair using CARP, allowing automatic failover if the primary firewall
+becomes unavailable.
+
+</p>
+
+</div>
+
+
+
+<div class="tech-card">
+
+<h3>MikroTik Routing</h3>
+
+<p>
+
+MikroTik routers provide advanced routing capabilities including
+traffic management, routing policies, and integration with external
+internet service providers.
+
+</p>
+
+</div>
+
+
+
+<div class="tech-card">
+
+<h3>Dual ISP Failover</h3>
+
+<p>
+
+Two internet connections are integrated into the network to provide
+external connectivity redundancy. Automatic failover ensures
+continuous internet access during outages.
+
+</p>
+
+</div>
+
+
+
+<div class="tech-card">
+
+<h3>VLAN Segmentation</h3>
+
+<p>
+
+Network segmentation is implemented to separate departments and
+services, improving network performance and security.
+
+</p>
+
+</div>
+
+
+
+<div class="tech-card">
+
+<h3>Layer 3 Switching</h3>
+
+<p>
+
+Layer 3 switching enables efficient routing between VLANs and
+supports high-speed data transfer within the enterprise network.
+
+</p>
+
+</div>
+
+
+
+<div class="tech-card">
+
+<h3>Enterprise Network Redundancy</h3>
+
+<p>
+
+Redundant infrastructure components ensure the network remains
+operational even if certain hardware devices or connections fail.
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- BACK BUTTON -->
+
+<section class="project-footer">
+
+<div class="container">
+
+<a href="index.html#projects" class="btn-primary">
+← Back to Projects
+</a>
+
+</div>
+
+</section>
+
+
+
+<footer class="footer">
+
+<p>© 2026 Gian Sawal | Network Administration Portfolio</p>
+
+</footer>
+
+
+
+</body>
+
+</html>
